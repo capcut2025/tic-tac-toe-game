@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X O Online - Convex</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="login-screen" class="screen">
+        <h1>لعبة X O أونلاين</h1>
+        <input type="text" id="username" placeholder="أدخل اسمك" />
+        <input type="text" id="room-code" placeholder="اسم الغرفة (مثال: room1)" />
+        <div class="buttons">
+          <button id="create-btn">إنشاء غرفة</button>
+          <button id="join-btn">انضمام لغرفة</button>
+        </div>
+        <p id="error-msg" class="error"></p>
+      </div>
+
+      <div id="game-screen" class="screen hidden">
+        <div class="header">
+          <h2 id="room-display"></h2>
+          <div class="players-info">
+            <span id="p1-display"></span> VS <span id="p2-display">...</span>
+          </div>
+          <div id="turn-indicator">انتظار اللاعب...</div>
+        </div>
+
+        <div class="board" id="board">
+          </div>
+      </div>
+
+      <div id="result-modal" class="modal hidden">
+        <div class="modal-content">
+          <h2 id="result-message"></h2>
+          <button onclick="location.reload()">لعب مرة أخرى</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
